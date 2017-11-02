@@ -1,8 +1,8 @@
 {
-  "name": "Homebridge",
+  "name": "Homekit2Mqtt",
   "version": "dev",
-  "slug": "homebridge",
-  "description": "HomeKit support for your Home Assistant instance using Homebridge",
+  "slug": "homekit2mqtt",
+  "description": "Use MQTT to communicate with your homekit devices",
   "url": "https://github.com/hassio-addons/addon-homebridge",
   "startup": "application",
   "boot": "auto",

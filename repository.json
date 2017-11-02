@@ -1,5 +1,5 @@
 {
-  "name": "Development - Community Hass.io Add-ons: Homebridge",
-  "url": "https://github.com/hassio-addons/addon-homebridge",
-  "maintainer": "Franck Nijhof <frenck@addons.community>"
+  "name": "Development - Community Hass.io Add-ons: homekit2mqtt",
+  "url": "https://github.com/dragouf/addon-homekit2mqtt",
+  "maintainer": "David LAURENT <dragouf@addons.community>"
 }

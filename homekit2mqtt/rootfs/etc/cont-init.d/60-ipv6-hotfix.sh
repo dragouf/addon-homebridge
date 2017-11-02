@@ -6,7 +6,7 @@
 # shellcheck disable=SC1091
 source /usr/lib/hassio-addons/base.sh
 
-readonly EVENTHTTP_FILE='/usr/lib/node_modules/homebridge/node_modules/hap-nodejs/lib/util/eventedhttp.js'
+readonly EVENTHTTP_FILE='/usr/lib/node_modules/homekit2mqtt/node_modules/hap-nodejs/lib/util/eventedhttp.js'
 
 if hass.config.false 'enable_ipv6'; then
     patch "${EVENTHTTP_FILE}" <<PATCH

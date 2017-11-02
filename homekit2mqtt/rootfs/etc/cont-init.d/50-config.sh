@@ -7,8 +7,8 @@
 source /usr/lib/hassio-addons/base.sh
 
 # Configuration paths
-readonly HOMEBRIDGE_CONFIG_FILE=/config/homebridge/config.json
-readonly HOMEBRIDGE_TEMPLATE_CONFIG_FILE=/root/homebridge-config.json
+readonly HOMEKIT2MQTT_CONFIG_FILE=/config/homekit2mqtt/config.json
+readonly HOMEKIT2MQTT_TEMPLATE_CONFIG_FILE=/root/homekit2mqtt-config.json
 
 # ------------------------------------------------------------------------------
 # Generates a random pin number for HomeKit (###-##-### format)
@@ -49,19 +49,19 @@ get_mac_addr() {
 }
 
 # Create Homebridge configuration directory when it is missing
-if ! hass.directory_exists "$(dirname "${HOMEBRIDGE_CONFIG_FILE}")"; then
-    mkdir -p "$(dirname "${HOMEBRIDGE_CONFIG_FILE}")" \
+if ! hass.directory_exists "$(dirname "${HOMEKIT2MQTT_CONFIG_FILE}")"; then
+    mkdir -p "$(dirname "${HOMEKIT2MQTT_CONFIG_FILE}")" \
         || hass.die 'Failed to create Homebrige configuration directory'
 fi
 
 # Generate Homebridge configuration file, when missing
-if ! hass.file_exists "${HOMEBRIDGE_CONFIG_FILE}"; then
-    cp "${HOMEBRIDGE_TEMPLATE_CONFIG_FILE}" "${HOMEBRIDGE_CONFIG_FILE}" \
+if ! hass.file_exists "${HOMEKIT2MQTT_CONFIG_FILE}"; then
+    cp "${HOMEKIT2MQTT_TEMPLATE_CONFIG_FILE}" "${HOMEKIT2MQTT_CONFIG_FILE}" \
         || hass.die 'Failed creating Homebridge configuration file'
 
-    sed -i "s/%%USERNAME%%/$(get_mac_addr)/g" "${HOMEBRIDGE_CONFIG_FILE}" \
+    sed -i "s/%%USERNAME%%/$(get_mac_addr)/g" "${HOMEKIT2MQTT_CONFIG_FILE}" \
         || hass.die 'Failed setting Homebridge username'
 
-    sed -i "s/%%PIN%%/$(generate_homekit_pin)/g" "${HOMEBRIDGE_CONFIG_FILE}" \
+    sed -i "s/%%PIN%%/$(generate_homekit_pin)/g" "${HOMEKIT2MQTT_CONFIG_FILE}" \
         || hass.die 'Failed setting Homebridge pin'
 fi

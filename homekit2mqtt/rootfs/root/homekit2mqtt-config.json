@@ -1,0 +1,14 @@
+"P2PlugKoogeek": {
+    "service": "Switch",
+    "name": "Koogeek Plug",
+    "topic": {
+        "setOn": "cmnd/desktopswitch/power",
+        "statusOn ": "stat/desktopswitch/POWER "
+    },
+    "payload": {
+        "onFalse": "ON",
+        "onTrue": "OFF"
+    },
+    "manufacturer": "Koogeek",
+    "model": "P2Plug"
+  }
