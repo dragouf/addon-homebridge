@@ -27,7 +27,7 @@ defaults: &defaults
                   -v ~/.docker:/root/.docker \
                   -v "$PWD":/docker \
                   hassioaddons/build-env:latest \
-                  --image "hassioaddons/homekit2mqtt-{arch}" \
+                  --image "dragouf/homekit2mqtt-{arch}" \
                   --git \
                   --target homekit2mqtt \
                   --${ARCH} \
@@ -37,7 +37,7 @@ defaults: &defaults
                   --privileged \
                   -v "$PWD":/docker \
                   hassioaddons/build-env:latest \
-                  --image "hassioaddons/homekit2mqtt-{arch}" \
+                  --image "dragouf/homekit2mqtt-{arch}" \
                   --git \
                   --target homekit2mqtt \
                   --${ARCH}
