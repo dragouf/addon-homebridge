@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 # ==============================================================================
-# Community Hass.io Add-ons: Homebridge
+# Community Hass.io Add-ons: homekit2mqtt
 # Ensures we've got an unique D-Bus ID
 # ==============================================================================
 # shellcheck disable=SC1091

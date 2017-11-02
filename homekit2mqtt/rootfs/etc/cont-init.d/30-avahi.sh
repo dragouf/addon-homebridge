@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 # ==============================================================================
-# Community Hass.io Add-ons: Homebridge
+# Community Hass.io Add-ons: Homekit2Mqtt
 # Configures the Avahi daemon
 # ==============================================================================
 # shellcheck disable=SC1091

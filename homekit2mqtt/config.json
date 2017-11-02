@@ -3,7 +3,7 @@
   "version": "dev",
   "slug": "homekit2mqtt",
   "description": "Use MQTT to communicate with your homekit devices",
-  "url": "https://github.com/hassio-addons/addon-homebridge",
+  "url": "https://github.com/dragouf/addon-homekit2mqtt",
   "startup": "application",
   "boot": "auto",
   "hassio_api": true,

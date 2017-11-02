@@ -8,7 +8,7 @@ source /usr/lib/hassio-addons/base.sh
 
 readonly HOMEKITCONFIG_FILE=/config/homekit2mqtt/config.json
 
-# Wait at least 5 seconds before staring Homebridge
+# Wait at least 5 seconds before staring Homekit2Mqtt
 # Avahi might need some time.
 sleep 5
 

@@ -27,9 +27,9 @@ defaults: &defaults
                   -v ~/.docker:/root/.docker \
                   -v "$PWD":/docker \
                   hassioaddons/build-env:latest \
-                  --image "hassioaddons/homebridge-{arch}" \
+                  --image "hassioaddons/homekit2mqtt-{arch}" \
                   --git \
-                  --target homebridge \
+                  --target homekit2mqtt \
                   --${ARCH} \
                   --push
               else
@@ -37,9 +37,9 @@ defaults: &defaults
                   --privileged \
                   -v "$PWD":/docker \
                   hassioaddons/build-env:latest \
-                  --image "hassioaddons/homebridge-{arch}" \
+                  --image "hassioaddons/homekit2mqtt-{arch}" \
                   --git \
-                  --target homebridge \
+                  --target homekit2mqtt \
                   --${ARCH}
               fi
       - deploy:
@@ -55,22 +55,22 @@ jobs:
     <<: *defaults
     environment:
       ARCH: aarch64
-      MICROBADGER_WEBHOOK: hassioaddons/homebridge-aarch64/K5oZAjqRvwfHXHX56Bcbi1fUc2E=
+      MICROBADGER_WEBHOOK: hassioaddons/homekit2mqtt-aarch64/K5oZAjqRvwfHXHX56Bcbi1fUc2E=
   amd64:
     <<: *defaults
     environment:
       ARCH: amd64
-      MICROBADGER_WEBHOOK: hassioaddons/homebridge-amd64/Kzk0TqgVBUmgBSuvaU6VaT5n0yY=
+      MICROBADGER_WEBHOOK: hassioaddons/homekit2mqtt-amd64/Kzk0TqgVBUmgBSuvaU6VaT5n0yY=
   armhf:
     <<: *defaults
     environment:
       ARCH: armhf
-      MICROBADGER_WEBHOOK: hassioaddons/homebridge-armhf/E88LGwAIssKB1tUisfCCbjZ7kh0=
+      MICROBADGER_WEBHOOK: hassioaddons/homekit2mqtt-armhf/E88LGwAIssKB1tUisfCCbjZ7kh0=
   i386:
     <<: *defaults
     environment:
       ARCH: i386
-      MICROBADGER_WEBHOOK: hassioaddons/homebridge-i386/jZ5g7ZUyCsppE3tDHMTjZh3H8k0=
+      MICROBADGER_WEBHOOK: hassioaddons/homekit2mqtt-i386/jZ5g7ZUyCsppE3tDHMTjZh3H8k0=
 
 workflows:
   version: 2

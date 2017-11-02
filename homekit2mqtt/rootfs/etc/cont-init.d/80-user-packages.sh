@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 # ==============================================================================
-# Community Hass.io Add-ons: Homebridge
+# Community Hass.io Add-ons: Homekit2Mqtt
 # Install user configured/requested packages
 # ==============================================================================
 # shellcheck disable=SC1091
