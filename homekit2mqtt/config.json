@@ -1,6 +1,6 @@
 {
   "name": "Homekit2Mqtt",
-  "version": "dev",
+  "version": "0.0.1",
   "slug": "homekit2mqtt",
   "description": "Use MQTT to communicate with your homekit devices",
   "url": "https://github.com/dragouf/addon-homekit2mqtt",
